@@ -43,13 +43,24 @@ public class MainActivity extends AppCompatActivity {
         switch (selezione){
             case "USD":
                 USDvaluta.setText(inputValuta.getText());
+
+                double GBP = Double.parseDouble((inputValuta.getText().toString())) * 0.74;
+                GBPvaluta.setText(String.valueOf(GBP));
+
+                double EUR = Double.parseDouble((inputValuta.getText().toString())) * 0.84;
+                EURvaluta.setText(String.valueOf(EUR));
+
                 Toast.makeText(getApplicationContext(), "USD", Toast.LENGTH_SHORT).show();
                 break;
             case "GBP":
+                USDvaluta.setText(inputValuta.getText());
                 GBPvaluta.setText(inputValuta.getText());
+                EURvaluta.setText(inputValuta.getText());
                 Toast.makeText(getApplicationContext(), "GBP", Toast.LENGTH_SHORT).show();
                 break;
             case "EUR":
+                USDvaluta.setText(inputValuta.getText());
+                GBPvaluta.setText(inputValuta.getText());
                 EURvaluta.setText(inputValuta.getText());
                 Toast.makeText(getApplicationContext(), "EUR", Toast.LENGTH_SHORT).show();
                 break;
