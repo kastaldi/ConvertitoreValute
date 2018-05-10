@@ -39,29 +39,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getValueSpinner(){
+        double GBP, EUR, USD;
         String selezione = String.valueOf(spinner.getSelectedItem());
         switch (selezione){
             case "USD":
                 USDvaluta.setText(inputValuta.getText());
-
-                double GBP = Double.parseDouble((inputValuta.getText().toString())) * 0.74;
+                GBP = Double.parseDouble((inputValuta.getText().toString())) * 0.74;
                 GBPvaluta.setText(String.valueOf(GBP));
-
-                double EUR = Double.parseDouble((inputValuta.getText().toString())) * 0.84;
+                EUR = Double.parseDouble((inputValuta.getText().toString())) * 0.84;
                 EURvaluta.setText(String.valueOf(EUR));
-
                 Toast.makeText(getApplicationContext(), "USD", Toast.LENGTH_SHORT).show();
                 break;
             case "GBP":
-                USDvaluta.setText(inputValuta.getText());
                 GBPvaluta.setText(inputValuta.getText());
-                EURvaluta.setText(inputValuta.getText());
+                USD = Double.parseDouble((inputValuta.getText().toString())) * 1.35;
+                USDvaluta.setText(String.valueOf(USD));
+                EUR = Double.parseDouble((inputValuta.getText().toString())) * 1.13;
+                EURvaluta.setText(String.valueOf(EUR));
                 Toast.makeText(getApplicationContext(), "GBP", Toast.LENGTH_SHORT).show();
                 break;
             case "EUR":
-                USDvaluta.setText(inputValuta.getText());
-                GBPvaluta.setText(inputValuta.getText());
                 EURvaluta.setText(inputValuta.getText());
+                USD = Double.parseDouble((inputValuta.getText().toString())) * 1.19;
+                USDvaluta.setText(String.valueOf(USD));
+                GBP = Double.parseDouble((inputValuta.getText().toString())) * 0.88;
+                GBPvaluta.setText(String.valueOf(GBP));
                 Toast.makeText(getApplicationContext(), "EUR", Toast.LENGTH_SHORT).show();
                 break;
         }
