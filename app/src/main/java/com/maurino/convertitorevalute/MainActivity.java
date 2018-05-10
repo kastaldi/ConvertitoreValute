@@ -39,28 +39,29 @@ public class MainActivity extends AppCompatActivity {
     private void getValueSpinner(){
         double GBP, EUR, USD;
         String selezione = String.valueOf(spinner.getSelectedItem());
+        String valuta = inputValuta.getText().toString();
         switch (selezione){
             case "USD":
-                USDvaluta.setText(inputValuta.getText());
-                GBP = Double.parseDouble((inputValuta.getText().toString())) * 0.74;
+                USDvaluta.setText(valuta);
+                GBP = Double.parseDouble(valuta) * 0.74;
                 GBPvaluta.setText(String.valueOf(GBP));
-                EUR = Double.parseDouble((inputValuta.getText().toString())) * 0.84;
+                EUR = Double.parseDouble(valuta) * 0.84;
                 EURvaluta.setText(String.valueOf(EUR));
                 Toast.makeText(getApplicationContext(), "USD", Toast.LENGTH_SHORT).show();
                 break;
             case "GBP":
-                GBPvaluta.setText(inputValuta.getText());
-                USD = Double.parseDouble((inputValuta.getText().toString())) * 1.35;
+                GBPvaluta.setText(valuta);
+                USD = Double.parseDouble(valuta) * 1.35;
                 USDvaluta.setText(String.valueOf(USD));
-                EUR = Double.parseDouble((inputValuta.getText().toString())) * 1.13;
+                EUR = Double.parseDouble(valuta) * 1.13;
                 EURvaluta.setText(String.valueOf(EUR));
                 Toast.makeText(getApplicationContext(), "GBP", Toast.LENGTH_SHORT).show();
                 break;
             case "EUR":
-                EURvaluta.setText(inputValuta.getText());
-                USD = Double.parseDouble((inputValuta.getText().toString())) * 1.19;
+                EURvaluta.setText(valuta);
+                USD = Double.parseDouble(valuta) * 1.19;
                 USDvaluta.setText(String.valueOf(USD));
-                GBP = Double.parseDouble((inputValuta.getText().toString())) * 0.88;
+                GBP = Double.parseDouble(valuta) * 0.88;
                 GBPvaluta.setText(String.valueOf(GBP));
                 Toast.makeText(getApplicationContext(), "EUR", Toast.LENGTH_SHORT).show();
                 break;
