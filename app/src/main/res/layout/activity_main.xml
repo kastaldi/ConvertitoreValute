@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/EURTextView"
+        android:layout_marginTop="24dp"
+        android:entries="@array/value_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="111dp"
+        android:text="Converti" />
+
+    <TextView
+        android:id="@+id/USDTextView"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="182dp"
+        android:text="USD" />
+
+    <TextView
+        android:id="@+id/ValutaUSD"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="182dp"
+        android:text="0.00" />
+
+    <TextView
+        android:id="@+id/GBPTextView"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/EURTextView"
+        android:layout_marginTop="214dp"
+        android:text="GBP" />
+
+    <TextView
+        android:id="@+id/ValutaGBP"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="214dp"
+        android:text="0.00" />
+
+    <TextView
+        android:id="@+id/EURTextView"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/USDTextView"
+        android:layout_marginTop="246dp"
+        android:text="EUR" />
+
+    <TextView
+        android:id="@+id/ValutaEUR"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="246dp"
+        android:text="0.00" />
+
+    <EditText
+        android:id="@+id/inputValuta"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinner"
+        android:layout_toEndOf="@+id/button"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:hint="00.0"/>
+
+</RelativeLayout>
