@@ -13,9 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Spinner spinner;
     private Button button;
-    private TextView USDvaluta;
-    private TextView GBPvaluta;
-    private TextView EURvaluta;
+    private TextView USDvaluta,GBPvaluta,EURvaluta;
     private EditText inputValuta;
 
     @Override
