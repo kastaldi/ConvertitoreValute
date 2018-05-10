@@ -1,2 +1,2 @@
 # ConvertitoreValute
-#just a first try at Android Studio
+first try at Android Studio
